@@ -1,0 +1,32 @@
+// Ejercicio 2
+#include <stdio.h>
+
+int main() {
+    //variables
+    int estudiantes=35,seccion=0, nota;
+    int i,suma_notas=0,nota_perfecta=0,nota_debajo=0;
+    //entrada y proceso
+    for (int i=1; i<=estudiantes; i++) {
+        printf("Ingrese la nota del estudiante en un rango de (0/100) %d:", i);
+        scanf("%d",&nota);
+        //sumas
+        suma_notas+=nota;
+        //notas altas
+        if (nota>=100) 
+        {nota_perfecta++;}
+        //notas bajas
+        if (nota<60) 
+        {nota_debajo++;}
+        
+    }
+    //calculo de promedio
+float promedio=suma_notas/estudiantes;
+printf("\n");
+   //salida de resultados
+    printf("El promedio de notas de la seccion es : %.2f\n",promedio);
+    printf("El numero de estudiantes con calificacion perfecta es : %d\n",nota_perfecta);
+    printf("El numero de estudiantes con la nota por debajo de 60 es : %d\n",nota_debajo);
+    
+//fin
+    return 0;
+}
