@@ -1,0 +1,25 @@
+// ejercicio 1
+#include <stdio.h>
+
+int main() {
+    // variables
+    int pagina=0,isbn=0;
+    float precio=1500,bs=5;
+    //datos ingresados
+    printf("Ingrese el ISBN o (codigo del libro): ",isbn);
+    scanf("%d",& isbn);
+    printf("Ingrese el numero de paginas: ",pagina);
+    scanf("%d",& pagina);
+    //operacion
+    precio=precio+(bs*pagina); 
+     if (pagina >= 300 && pagina <= 500) {
+        precio += 150;
+    }
+    if (pagina > 550) {
+        precio += 250;
+    }
+    //muestra resultado
+    printf("ISBN:%d\n Precio:%.2f bs\n", isbn, precio);
+
+    return 0;
+}
